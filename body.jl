@@ -23,6 +23,6 @@ function forceFrom(b::Body, bOther::Body)
     return (delta ./ norm(delta)) .* magnitude
 end
 
-function draw(b::Body, ax)
-    poly!(ax, Circle(Point2f(b.r[1], b.r[2]), 0.05), color = :blue)
+function draw(b::Body, ax, radius)
+    poly!(ax, Circle(Point2f(b.r[1], b.r[2]), radius * 0.02), color = :blue)
 end
